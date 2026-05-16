@@ -1,0 +1,19 @@
+module des;
+  reg[7:0] a;
+  reg[7:0] b;
+  
+  initial begin
+    a=45; b=9;
+    $display("a(%0d) === b(%0d) :%0d" a,b,a===b);
+    a='b101x; b='b1011
+    $display("a(%0d) === b(%0d) :%0d" a,b,a===b);
+    a='b101x; b='b101x;
+    $display("a(%0d) === b(%0d) :%0d" a,b,a===b);
+    a='b101z; b='b1z00; 
+    $display("a(%0d) !== b(%0d) :%0d" a,b,a!==b);
+    a=39;  b=39;
+    $display("a(%0d) == b(%0d) :%0d" a,b,a==b);
+    a=14; b=14;
+    $display("a(%0d) != b(%0d) :%0d" a,b,a!=b);
+  end
+endmodule
