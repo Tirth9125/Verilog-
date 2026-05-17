@@ -1,0 +1,23 @@
+module des;
+  reg[7:0] a;
+  reg[7:0] b;
+  
+  initial begin
+    a=45;
+    b=9;
+    $display("a>=b %d", a>=b);
+   
+    a=45;
+    b=45;
+    $display("a<=b %d", a<=b);
+    
+    a=8;
+    b=9;
+    $display("a>b %d", a>b);
+    
+    a=22;
+    b=22;
+    $display("a<b %d", a<b);
+   
+  end
+endmodule
