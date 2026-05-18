@@ -1,0 +1,12 @@
+// Code your testbench here
+// or browse Examples
+module des;
+  reg [7:0] a;
+  reg [7:0] b;
+  
+  initial begin 
+    a=0; b=4; $display("a(%0d)&&b(%0d):0%d" a&&b);  
+    a='dx; b=3 $display("a(%0d)||b(%0d):0%d"a||b);
+    a=4;      $display("!a(%0d):%0d",!a);
+  end 
+endmodule
