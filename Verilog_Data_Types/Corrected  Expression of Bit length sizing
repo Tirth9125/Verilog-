@@ -1,0 +1,13 @@
+// Code your testbench here
+// or browse Examples
+module my_module;
+  reg[15:0] a,b,answer;
+  initial begin
+    a=16'hffff;
+    b=16'h0001;
+    answer=(a+b)>>1;
+    $display("problematic answer =%h",answer);
+    answer=(a+b+0)>>1;
+    $display("Corrected answer =%h",answer);
+  end
+endmodule
