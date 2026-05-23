@@ -1,0 +1,23 @@
+// Code your testbench here
+// or browse Examples
+module divison_by_zero_eg;
+reg[7:0] dividend;
+reg[7:0] divisor;
+reg[7:0] result_division;
+reg[7:0] result_modulus;
+
+initial begin
+  dividend = 8'd10;
+  divisor = 8'd0;
+  
+  result_division = dividend/divisor;
+  $display("At time %0t:result of %d/%d=%h" ,$time, dividend, divisor, result_division);
+  
+  result_modulus = dividend%divisor;
+  $display("At time %0t:result of %d %% %d=%h" ,$time, dividend, divisor, result_modulus);
+  
+  divisor=8'd5;
+   result_division = dividend / divisor;
+ $display("At time %0t: Result of %d / %d = %h", $time, dividend, divisor, result_division);
+ end
+endmodule
