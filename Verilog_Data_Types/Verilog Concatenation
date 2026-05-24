@@ -1,0 +1,12 @@
+// Code your testbench here
+// or browse Examples
+module my_module;
+wire a,b;
+wire[1:0]res;
+assign res={a,b};
+
+wire[2:0] c;
+wire[7:0] res1;
+
+assign res1={b,a,c[1:0],2'b00,c[2]};
+endmodule
