@@ -1,0 +1,7 @@
+module my_design;
+  initial begin
+    forever begin
+      $display("Verilog");
+    end 
+  end
+endmodule
