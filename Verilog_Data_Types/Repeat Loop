@@ -1,0 +1,10 @@
+// Code your testbench here
+// or browse Examples
+
+module my_design;
+  initial begin
+    repeat(100)begin 
+      $display ("Verilog is hardware description language");
+    end
+  end
+endmodule
