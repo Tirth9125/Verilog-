@@ -1,0 +1,11 @@
+// Code your testbench here
+// or browse Examples
+module my_design;
+  integer i =5;
+  initial begin
+    while (i>0)begin
+      $display("Tirth",i);
+      i=i-1;
+    end
+  end 
+endmodule
