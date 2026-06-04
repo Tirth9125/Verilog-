@@ -1,0 +1,10 @@
+// Code your testbench here
+// or browse Examples
+module my_design;
+  int i=5;
+  initial begin
+    for (i=0;i< 5;i=i+1)begin
+      $display("VHDL",i);
+    end
+  end
+endmodule
