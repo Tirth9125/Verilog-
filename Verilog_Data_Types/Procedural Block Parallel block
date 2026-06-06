@@ -1,0 +1,11 @@
+// Code your testbench here
+// or browse Examples
+module my_design;
+initial begin
+	#10   data = 8'hfe;
+	fork
+	   #20 data = 8'h11;
+	   #10 data = 8'h00;
+	join
+end
+endmodule
