@@ -1,0 +1,6 @@
+// Code your design here
+module combo( input a,b,c,d,e,outputz);
+  assign z=((a&b)|(c^d)&~e);
+  
+endmodule
+
