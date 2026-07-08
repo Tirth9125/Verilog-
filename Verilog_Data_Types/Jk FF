@@ -1,0 +1,26 @@
+// JK Flip-Flop with asynchronous active-low reset
+module jk_ff (
+ 	input j, 			// Input J: when high with K low, sets Q to 0
+ 	input k,  			// Input K: when high with J low, sets Q to 1
+ 	input rstn, 		// Active-low async reset: immediately clears Q
+ 	input clk,  		// Clock: triggers state changes on rising edge
+ 	output reg q  		// Output Q: stored state value
+);
+
+ 	// Sequential logic: sensitive to clock edge and reset edge
+ 	always @ (posedge clk or negedge rstn) begin
+ 		if (!rstn) begin
+ 			// Asynchronous reset: Q becomes 0 immediately when rstn goes low
+ 			// This happens independent of clock edge
+ 			q <= 0;
+ 		end else begin
+			// JK flip-flop logic (evaluated only on rising clock edge):
+			// j=0,k=0: hold current value (q unchanged)
+			// j=0,k=1: reset Q to 1
+			// j=1,k=0: set Q to 0
+			// j=1,k=1: toggle Q
+			// Boolean expression: Q_next = (J & ~Q) | (~K & Q)
+			q <= (j & ~q) | (~k & q);
+ 		end
+ 	end
+endmodule
